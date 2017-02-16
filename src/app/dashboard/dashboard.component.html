@@ -1,6 +1,11 @@
 <h3>Integrationen</h3>
-<ul class="integrations">
-    <li *ngFor="let integration of integrations">
-        <span class="badge">{{integration.id}}</span> {{integration.name}}
-    </li>
-</ul>
+<div class="row">
+    <div class="col-sm-6 col-md-2" *ngFor="let integration of integrations">
+        <a routerLink="/{{integration.link}}" routerLinkActive="active">
+            <div class="well">
+                <h3> {{integration.name}}</h3>
+                <div> {{integration.description}}</div>
+            </div>
+        </a>
+    </div>
+</div>
