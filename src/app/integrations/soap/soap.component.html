@@ -1,5 +1,34 @@
-<div>banane</div>
+<h3>Soap</h3>
+<div>Die SOAP-Dokumentation finden Sie <a href="https://srv89.promio-mail.com/wiki.php?id=de/api/rpc">hier</a></div>
+<div class="well"><h4>API-Key</h4></div>
+<p>Dieser Key wird benötigt, um Ihre SOAP-Anfragen zu authentifizieren. In der SOAP-Dokumentation sind die Stellen zu finden, an denen der API-Key eingesetzt werden muss.</p>
+<div>Ihr API-Key lautet: <span><b>{{apiKey}}</b></span></div><p></p>
+<div class="well"><h4>Liste der erlaubten IP-Adressen</h4></div>
+<p>SOAP-Anfragen werden nur von diesen IP-Adressen akzeptiert. Anfragen von anderen IP-Adressen werden mit einer Fehlermeldung zurückgewiesen.
+    Sie können auch * eintragen, damit erlauben Sie den Zugriff von allen IP-Adressen.
+</p>
 
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        Freigeschaltete Ips
+    </div><p><label for="fbf">NewAdress</label> <input #fbf id="fbf"  name="fbf" placeholder="127.0.0.1"><button (click)="enrich(fbf.value)" >DOIT!</button></p>
+
+    <!-- Table -->
+    <table class="table">
+        <thead>
+        <th>IP</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ip of ips">
+                <td>{{ip.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<p></p>
 <button  (click)="goBack()" type="button" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Zurück
 </button>

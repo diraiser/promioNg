@@ -1,4 +1,24 @@
-<div>banane</div>
+<div class="container">
+    <h1>Onesignal Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input [(ngModel)]="model.name" name="name" type="text" class="form-control" id="name" required >
+        </div>
+        <div class="form-group">
+            <label for="ApiKey">Alter Ego</label>
+            <input [(ngModel)]="model.appKey" name="appKey" type="text" class="form-control" id="ApiKey" required >
+        </div><div class="form-group">
+            <label for="AppId">Alter Ego</label>
+            <input [(ngModel)]="model.appId" name="appId" type="text" class="form-control" id="AppId" required >
+        </div><div class="form-group">
+            <label for="UserAuth">Alter Ego</label>
+            <input [(ngModel)]="model.userAuthKey" name="userAuthKey" type="text" class="form-control" id="UserAuth" >
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
 
 <button  (click)="goBack()" type="button" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Zurück

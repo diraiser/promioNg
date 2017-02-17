@@ -1,4 +1,4 @@
-import {Integration} from './integration';
+import {Integration} from './model/integration';
 
 export const INTEGRATIONS: Integration[] =
     [
