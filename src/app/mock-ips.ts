@@ -1,6 +1,6 @@
 
-import {Ips} from "./model/ips";
-export const IPS: Ips[] =
+import {IpsForm} from "./model/ips";
+export const IPS: IpsForm[] =
     [
         {address:'192.168.0.1'}
         ,{address:'192.168.0.2'}

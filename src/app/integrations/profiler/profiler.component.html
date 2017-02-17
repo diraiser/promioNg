@@ -1,4 +1,29 @@
-<div>banane</div>
+<div>Profiler360</div>
+<p></p>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        Legen Sie ein Website-Profil für jede zu trackende Website an.
+    </div><p></p><button (click)="getModal()">DOIT!</button>
+    <!-- Table -->
+    <table class="table">
+        <thead>
+        <th>Erstellt</th>
+        <th>Name</th>
+        <th>aktiv</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let profile of profiles">
+            <td>{{profile.created}}</td>
+            <td>{{profile.name}}</td>
+            <td>
+                <span *ngIf="profile.active" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                <span *ngIf="!profile.active" class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 <button  (click)="goBack()" type="button" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Zurück
