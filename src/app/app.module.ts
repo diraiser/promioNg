@@ -14,6 +14,7 @@ import { FacebookComponent }   from './integrations/facebook/facebook.component'
 import { OnesignalComponent }   from './integrations/onesignal/onesignal.component';
 import { ProfilerComponent }   from './integrations/profiler/profiler.component';
 import { SoapComponent }   from './integrations/soap/soap.component';
+import {ProfilerFormData} from "./integrations/profiler/profilerFormData.component";
 
 
 @NgModule({
@@ -32,11 +33,14 @@ import { SoapComponent }   from './integrations/soap/soap.component';
       ,OnesignalComponent
       ,ProfilerComponent
       ,SoapComponent
+      ,ProfilerFormData
+
 
   ],
   providers: [
     IntegrationService
   ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+    entryComponents: [ ProfilerFormData ]
 })
 export class AppModule { }
