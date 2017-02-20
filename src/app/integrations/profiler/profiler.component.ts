@@ -1,8 +1,8 @@
 import { Component, ViewContainerRef  } from '@angular/core';
-import { Modal } from 'angular2-modal/plugins/bootstrap';
+import { Modal,BSModalContext } from 'angular2-modal/plugins/bootstrap';
 import { Location } from '@angular/common';
 import {PROFILER} from "../../mock-profiler";
-import {Overlay} from "angular2-modal";
+import {Overlay,overlayConfigFactory} from "angular2-modal";
 import {ProfilerFormData,AdditionalData} from "./profilerFormData.component";
 
 @Component({
@@ -15,6 +15,8 @@ import {ProfilerFormData,AdditionalData} from "./profilerFormData.component";
 
 export class ProfilerComponent {
     profiles = PROFILER;
+    a = new AdditionalData(2,3)
+
     constructor(
         private location: Location
         ,overlay: Overlay
@@ -30,6 +32,7 @@ export class ProfilerComponent {
 
     getModal():void
     {
-        this.modal.open(ProfilerFormData,new AdditionalData(2,3));
+        this.a.showClose = true;
+        this.modal.open(ProfilerFormData,overlayConfigFactory({ num1: 2, num2: 3 }));
     }
 }
